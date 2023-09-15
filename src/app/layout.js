@@ -5,7 +5,7 @@ import {
 } from 'next/font/google';
 import clsx from 'clsx';
 
-import { LIGHT_TOKENS, DARK_TOKENS } from '@/constants';
+import { LIGHT_TOKENS, DARK_TOKENS, BLOG_TITLE } from '@/constants'
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
