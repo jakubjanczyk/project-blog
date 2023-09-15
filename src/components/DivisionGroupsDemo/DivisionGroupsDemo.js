@@ -42,6 +42,7 @@ function DivisionGroupsDemo({
         gridTemplateRows: '1fr 1fr',
       }
 
+  let numOfAssignedItemsToGroups = numOfGroups * numOfItemsPerGroup
   return (
     <LayoutGroup>
       <Card as="section" className={styles.wrapper}>
@@ -94,9 +95,10 @@ function DivisionGroupsDemo({
               Remainder Area
             </p>
 
-            {range(remainder).map((index) => {
+            {range(numOfAssignedItemsToGroups, numOfItems).reverse().map((index) => {
+              const layoutId = `${id}-${index}`
               return (
-                <div key={index} className={styles.item} />
+                <motion.div key={layoutId} layoutId={layoutId} className={styles.item} />
               )
             })}
           </div>
